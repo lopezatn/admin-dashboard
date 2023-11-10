@@ -1,3 +1,14 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 2fr 2fr 2fr;
+  grid-template-areas: 
+    "navbar header header header"
+    "navbar main main main"
+    "navbar main main main";
+}
 
 .dashboard-image {
     filter: invert(1);
@@ -44,6 +55,10 @@
     margin-right: 10px;
   }
 
+  .navigation-margin {
+    padding: 0% 0% 10% 0%;
+  }
+
   .item-header {
     grid-area: header;
     background-color: blue;
@@ -53,13 +68,3 @@
     grid-area: main;
     background-color: green;
   }
-  
-  .container {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-template-rows: 2fr 2fr 2fr;
-    grid-template-areas: 
-      "navbar header header header"
-      "navbar main main main"
-      "navbar main main main";
-    }
