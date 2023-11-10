@@ -76,6 +76,36 @@ nav a {
 	margin-right: 10px;
 }
 
+.header {
+	grid-area: header;
+}
+
+.header-grid {
+	display: grid;
+	align-items: start;
+	grid-template-columns: 1fr 1fr; 
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+	"search-bar user-profile"
+	"user-greetings project-buttons";
+}
+
+.search-bar {
+	grid-area: search-bar;
+}
+
+.user-profile {
+	grid-area: user-profile;
+}
+
+.user-greetings {
+	grid-area: user-greetings;
+}
+
+.project-buttons {
+	grid-area: project-buttons;
+}
+
 .search-icon {
 	width: 20px;
 	height: 20px;
@@ -88,18 +118,19 @@ nav a {
   padding: 1% 0 0 2%;
 }
 
+.profile-icon {
+	width: 20px;
+	height: 20px;
+  padding: 1% 0 0 2%;
+}
+
 .search-bar {
 	width: 40%;
-	padding: 8px;
 	border: none;
 	border-radius: 10px;
 	background-color: #d3d3d3;
-	outline: none;
 }
 
-.header {
-	grid-area: header;
-}
 
 .main {
 	grid-area: main;
