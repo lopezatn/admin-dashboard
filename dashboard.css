@@ -1,70 +1,87 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr 2fr;
-  grid-template-rows: 2fr 2fr 2fr;
-  grid-template-areas: 
-    "navbar header header header"
-    "navbar main main main"
-    "navbar main main main";
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	display: grid;
+	grid-template-columns: 2fr 2fr 2fr 2fr;
+	grid-template-rows: 2fr 2fr 2fr;
+	grid-template-areas: 
+	"sidebar header header header"
+	"sidebar main main main"
+	"sidebar main main main";
 }
 
-.dashboard-image {
-    filter: invert(1);
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.dashboard-icon {
+	filter: invert(1);
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
 }
 
-.dash-container {
-    display: flex;
-    align-items: center;
-    padding: 0 0 3% 0;
+.sidebar-grid {
+	display: grid;
+	align-items: start;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr 2fr 1fr;
+	grid-template-areas: 
+	"nav-header"
+	"main-nav"
+	"secondary-nav";
 }
 
-.item-navbar {
-    grid-area: navbar;
-    height: 100vh;
-    background-color: #4895ef;
-    color: white;
-    padding: 0 0 5% 5%;
-  }
-
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: white;
-  }
-
-  .nav-link {
-    display: flex;
-    align-items: center;
-    padding: 0 0 3% 0;
+.sidebar-header {
+	grid-area: nav-header;
+	display: flex;
+	align-items: center;
+	padding: 0 0 3% 0;
 }
 
-  .navbar-icons {
-    filter: invert(1);
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-  }
+.main-nav {
+	grid-area: main-nav;
+	margin-bottom: 50px;
+}
 
-  .navigation-margin {
-    padding: 0% 0% 10% 0%;
-  }
+.secondary-nav {
+	grid-area: secondary-nav;
+}
 
-  .item-header {
-    grid-area: header;
-    background-color: blue;
-  }
+.sidebar {
+	grid-area: sidebar;
+	height: 100vh;
+	background-color: #4895ef;
+	color: white;
+	padding: 0 0 5% 5%;
+}
 
-  .item-main {
-    grid-area: main;
-    background-color: green;
-  }
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	padding: 0 0 3% 0;
+}
+
+.nav-link-icon {
+	filter: invert(1);
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+.header {
+	grid-area: header;
+	background-color: blue;
+}
+
+.main {
+	grid-area: main;
+	background-color: green;
+}

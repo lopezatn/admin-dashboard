@@ -1,77 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard.css"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <title>Admin Dashboard</title>
-</head>
-<body>
-    <navbar class="item-navbar">
-        <div class="selectors">
-            <span class="dash-container">
-                <img src="./assets/images/dashboard.svg" alt="dashboard Image" class="dashboard-image">
-            <h2>Dashboard</h2></span>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="./" class="nav-link">
-                            <img src="./assets/images/home.svg" class="navbar-icons" alt="home"/>Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./" class="nav-link">
-                            <img src="./assets/images/profile.svg" class="navbar-icons" alt="profile"/>Profile
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./" class="nav-link">
-                            <img src="./assets/images/messages.svg" class="navbar-icons" alt="messages"/>Messages
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./" class="nav-link">
-                            <img src="./assets/images/history.svg" class="navbar-icons" alt="history"/>History
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./" class="nav-link">
-                            <img src="./assets/images/tasks.svg" class="navbar-icons" alt="tasks"/>Tasks
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./" class="nav-link">
-                            <img src="./assets/images/communities.svg" class="navbar-icons" alt="communities"/>Communities
-                        </a>
-                    </li>
-                    <div class="navigation-margin"></div>
-                    <li>
-                        <a href="./" class="nav-link">
-                            <img src="./assets/images/settings.svg" class="navbar-icons" alt="settings"/>Settings
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./" class="nav-link">
-                            <img src="./assets/images/support.svg" class="navbar-icons" alt="support"/>Support
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./" class="nav-link">
-                            <img src="./assets/images/privacy.svg" class="navbar-icons" alt="privacy"/>Privacy
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </navbar>
+  </head>
+  <body>
 
-    <header class="item-header">
-        <div class=""></div>
+    <section class="sidebar">
+      <div class="sidebar-grid">
+        <section class="sidebar-header">
+          <img
+            src="./assets/images/dashboard.svg"
+            alt="dashboard icon"
+            class="dashboard-icon"
+          />
+          <h2>Dashboard</h2>
+				</section>
+
+				<nav class="main-nav">
+					<ul>
+						<li>
+							<a href="./" class="nav-link">
+								<img
+									src="./assets/images/home.svg"
+									class="nav-link-icon"
+									alt="home"
+								/>Home
+							</a>
+						</li>
+						<li>
+							<a href="./" class="nav-link">
+								<img
+									src="./assets/images/profile.svg"
+									class="nav-link-icon"
+									alt="profile"
+								/>Profile
+							</a>
+						</li>
+						<li>
+							<a href="./" class="nav-link">
+								<img
+									src="./assets/images/messages.svg"
+									class="nav-link-icon"
+									alt="messages"
+								/>Messages
+							</a>
+						</li>
+						<li>
+							<a href="./" class="nav-link">
+								<img
+									src="./assets/images/history.svg"
+									class="nav-link-icon"
+									alt="history"
+								/>History
+							</a>
+						</li>
+						<li>
+							<a href="./" class="nav-link">
+								<img
+									src="./assets/images/tasks.svg"
+									class="nav-link-icon"
+									alt="tasks"
+								/>Tasks
+							</a>
+						</li>
+						<li>
+							<a href="./" class="nav-link">
+								<img
+									src="./assets/images/communities.svg"
+									class="nav-link-icon"
+									alt="communities"
+								/>Communities
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<nav class="secondary-nav">
+					<ul>
+						<li>
+							<a href="./" class="nav-link">
+								<img
+									src="./assets/images/settings.svg"
+									class="nav-link-icon"
+									alt="settings"
+								/>Settings
+							</a>
+						</li>
+						<li>
+							<a href="./" class="nav-link">
+								<img
+									src="./assets/images/support.svg"
+									class="nav-link-icon"
+									alt="support"
+								/>Support
+							</a>
+						</li>
+						<li>
+							<a href="./" class="nav-link">
+								<img
+									src="./assets/images/privacy.svg"
+									class="nav-link-icon"
+									alt="privacy"
+								/>Privacy
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+
+    <header class="header">
+      <div class=""></div>
     </header>
 
-    <main class="item-main">MAIN</main>        
-</body>
+    <main class="main">MAIN</main>
+  </body>
 </html>
