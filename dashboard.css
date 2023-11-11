@@ -1,20 +1,132 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+  --full-width: 100%;
+  --full-height: 100%;
+	--icon-size: 20px;
+	--blue-primary: #4895ef;
+	--primary-button-color: var(var(--blue-primary));
+	--primary-text-color: white;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
+	font-weight: 500;
 	display: grid;
-	grid-template-columns: 1fr 2fr 2fr 2fr;
-	grid-template-rows: 2fr 2fr 2fr;
+	grid-template-columns: 1fr 4fr;
+	grid-template-rows: 1fr 4fr;
 	grid-template-areas:
 	"sidebar header header header"
 	"sidebar main main main"
 	"sidebar main main main";
 }
 
+
+.header {
+	grid-area: header;
+}
+
+.header-grid {
+	display: grid;
+  width: var(--full-width);
+  height: var(--full-height);
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 2fr;
+	grid-template-areas: 
+	"search-bar user-profile"
+	"user-greetings project-buttons";
+}
+
+.search-bar {
+	grid-area: search-bar;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.user-profile {
+	grid-area: user-profile;
+	display: grid;
+	grid-template-columns: 1fr 1fr 3fr;
+	grid-template-areas: "bell-icon profile-icon";
+	justify-items: center;
+	align-items: center;
+}
+
+.user-greetings {
+	grid-area: user-greetings;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-template-rows: 2fr 2fr;
+	grid-template-areas:
+	"profile-icon greeting"
+	"profile-icon user";
+
+	.profile-icon {
+		width: 60px;
+    height: 60px;
+    grid-area: profile-icon;
+    justify-self: right;
+    align-self: center;
+    margin-right: 12px;
+	}
+
+	.greeting {
+		grid-area: greeting;
+		align-self: end;
+		font-size: 12px;
+		padding-bottom: 4px;
+	}
+	
+	.user {
+		grid-area: user;
+	}
+}
+
+.action-buttons {
+	grid-area: project-buttons;
+
+
+}
+
+.search-icon {
+	width: var(--icon-size);
+	height: var(--icon-size);
+	margin-right: max(12px, 1%)
+}
+
+.bell-icon {
+	width: var(--icon-size);
+	height: var(--icon-size);
+	justify-self: right;
+}
+
+.profile-icon {
+	width: var(--icon-size);
+	height: var(--icon-size);
+}
+
+.user-name {
+	justify-self: left;
+	font-size: 14px;
+}
+
+.search-input {
+	width: min(400px, 80%);
+	height: 20px;
+	border: none;
+	border-radius: 10px;
+	background-color: #d3d3d3;
+}
+
 .sidebar {
 	grid-area: sidebar;
 	height: 100vh;
-	background-color: #4895ef;
-	color: white;
+	background-color: var(--blue-primary);
+	color: var(--primary-text-color);
 	padding: 0 0 5% 5%;
 }
 
@@ -28,7 +140,6 @@ body {
 .sidebar-grid {
 	display: grid;
 	align-items: start;
-	grid-template-columns: 100%;
 	grid-template-rows: 1fr 2fr 1fr;
 	grid-template-areas: 
 	"nav-header"
@@ -40,7 +151,7 @@ body {
 	grid-area: nav-header;
 	display: flex;
 	align-items: center;
-	padding: 0 0 3% 0;
+	padding: 5% 0 0 0;
 }
 
 .main-nav {
@@ -60,13 +171,13 @@ nav ul {
 
 nav a {
 	text-decoration: none;
-	color: white;
+	color: var(--primary-text-color);
 }
 
 .nav-link {
 	display: flex;
 	align-items: center;
-	padding: 0 0 3% 0;
+	padding-bottom: max(14px, 2%)
 }
 
 .nav-link-icon {
@@ -75,62 +186,6 @@ nav a {
 	height: 20px;
 	margin-right: 10px;
 }
-
-.header {
-	grid-area: header;
-}
-
-.header-grid {
-	display: grid;
-	align-items: start;
-	grid-template-columns: 1fr 1fr; 
-	grid-template-rows: 1fr 1fr;
-	grid-template-areas: 
-	"search-bar user-profile"
-	"user-greetings project-buttons";
-}
-
-.search-bar {
-	grid-area: search-bar;
-}
-
-.user-profile {
-	grid-area: user-profile;
-}
-
-.user-greetings {
-	grid-area: user-greetings;
-}
-
-.project-buttons {
-	grid-area: project-buttons;
-}
-
-.search-icon {
-	width: 20px;
-	height: 20px;
-  padding: 1% 0 0 2%;
-}
-
-.bell-icon {
-	width: 20px;
-	height: 20px;
-  padding: 1% 0 0 2%;
-}
-
-.profile-icon {
-	width: 20px;
-	height: 20px;
-  padding: 1% 0 0 2%;
-}
-
-.search-bar {
-	width: 40%;
-	border: none;
-	border-radius: 10px;
-	background-color: #d3d3d3;
-}
-
 
 .main {
 	grid-area: main;
