@@ -7,9 +7,11 @@
   --full-width: 100%;
   --full-height: 100%;
 	--icon-size: 20px;
-	--blue-primary: #4895ef;
+	--blue: #4895ef;
+	--lightblue: #8cb5e4;
 	--background-primary: #d3d3d3;
-	--primary-button-color: var(--blue-primary);
+	--primary-button-color: var(--blue);
+	--primary-button-color-hover: var(--lightblue);
 	--primary-text-color: white;
 }
 
@@ -92,15 +94,8 @@ body {
 	display: flex;
 	align-items: center;
 
-	.button {
-		background-color: var(--primary-button-color);
-    border: none;
-    border-radius: 12px;
-    font-size: 12px;
-    color: var(--primary-text-color);
-    padding: 6px 0;
+	.primary-button {		
 		margin-right: 5%;
-    width: 72px;
 	}
 
 }
@@ -138,7 +133,7 @@ body {
 .sidebar {
 	grid-area: sidebar;
 	height: 100vh;
-	background-color: var(--blue-primary);
+	background-color: var(--blue);
 	color: var(--primary-text-color);
 	padding: 0 0 5% 5%;
 }
@@ -201,6 +196,7 @@ nav a {
 }
 
 .main {
+	padding: 2%;
 	grid-area: main;
 	display: grid;
 	grid-template-columns: 3fr 1fr;
@@ -208,13 +204,14 @@ nav a {
 	grid-template-areas: 
 	"projects announcements"
 	"projects trending";
+	gap: min(5px, 2%);
 	background-color: var(--background-primary);
 
 	.projects {
 		grid-area: projects;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 3fr 3fr 3fr;
+		grid-template-rows: 1fr 8fr 8fr 8fr;
 
 		.card {
 			display: grid;
@@ -243,10 +240,35 @@ nav a {
 
 	.announcements {
 		grid-area: announcements;
+		display: grid;
+    grid-template-rows: 1fr 10fr;
+
+		.card {
+			width: 100%;
+			height: fit-content;
+    	padding: 9% 7%;
+		}
 	}
 
 	.trending {
 		grid-area: trending;
+
+		.card {
+			width: 100%;
+		}
+
+		> figure {
+			display: grid;
+			grid-template-columns: 1fr 5fr;
+			grid-template-rows: 1fr 1fr;
+		}
+
+		.user-image {
+			align-self: center;
+			justify-self: center;
+			width: 20px;
+			height: 20px;
+		}
 	}
 
 	.main-title {
@@ -267,4 +289,24 @@ nav a {
 
 .rotate-90 {
 	transform: rotate(-90deg);
+}
+
+.primary-button {
+	background-color: var(--primary-button-color);
+	border: none;
+	border-radius: 12px;
+	font-size: 12px;
+	color: var(--primary-text-color);
+	padding: 6px 0;
+	width: 72px;
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--primary-button-color-hover);
+	}
+}
+
+.separator {
+	border-bottom: 1px solid var(--background-primary);
+	margin: 12px 0;
 }
